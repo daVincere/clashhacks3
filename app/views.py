@@ -7,6 +7,12 @@ from flask import render_template
 def index():
 	return render_template('base.html')
 
-@app.route('/jobs')
-def assigned_jobs():
-	return render_template('jobs.html')
+@app.route('/dev')
+def dev_jobs():
+	return render_template('dev_jobs.html')
+
+@app.route('/market')
+def dev_market():
+	return render_template('m_jobs.html')
+
+

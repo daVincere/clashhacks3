@@ -24,7 +24,7 @@ ACCESS_TOKEN = "EAACEdEose0cBAME4wMYoUy7aDuOzPlZCdA5fG0VZBgUqgcJZBECZAxa0FbsqasG
 def scarpe_facebook():
 # build the URL for the API endpoint
 	host = "https://graph.facebook.com"
-	path = "/1849134045317304/feed"
+	path = "/1542318536060253/feed"
 	params = urllib.urlencode({"access_token": ACCESS_TOKEN})
 
 	url = "{host}{path}?{params}".format(host=host, path=path, params=params)
