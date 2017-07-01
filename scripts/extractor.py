@@ -43,6 +43,13 @@ print cleaned
 
 for words in cleaned:
 	if words in dict["NN"] or words in dict["VBD"]:
-		print "Call the computers company"
+		call = True
+		break
 	else:
-		print "Call no one"
+		call = False
+
+
+if call == True:
+	print "Call the computer company"
+else:
+	print "Call no one"
