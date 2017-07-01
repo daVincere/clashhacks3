@@ -6,9 +6,7 @@ import keywords
 stop_words = get_stop_words('en')
 stop_words = get_stop_words('english')
 
-text = """
-Advertise with the best when it comes to making your brand visible to the public
-"""
+text = raw_input("Please enter the text::")
 text = text.lower()
 print text
 blob = tb(text)
@@ -24,7 +22,8 @@ dict = {
 		"website",
 		"advertise",
 		"market",
-		"brand"
+		"brand",
+		"website",
 		],
 
 	"VBD":[
