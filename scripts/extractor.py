@@ -6,7 +6,11 @@ import keywords
 stop_words = get_stop_words('en')
 stop_words = get_stop_words('english')
 
-text = "I want a computer engineer to do web stuff"
+text = """
+Advertise with the best when it comes to making your brand visible to the public
+"""
+text = text.lower()
+print text
 blob = tb(text)
 
 # dictonary
@@ -17,14 +21,18 @@ dict = {
 		"backend",
 		"frontend",
 		"full-stack",
-		"website"
+		"website",
+		"advertise",
+		"market",
+		"brand"
 		],
 
 	"VBD":[
 		"want",
 		"need",
 		"needed",
-		"required"
+		"required",
+		"expansion",
 		]
 	}
 
@@ -50,6 +58,12 @@ for words in cleaned:
 
 
 if call == True:
-	print "Call the computer company"
+	if words in cleaned and words == "web":
+		print "Call the computer company"
+	elif words in cleaned and words == "advertise":
+		print "Call the advertisment firm"
+	else:
+		print "Call no one"
 else:
-	print "Call no one"
+	print "out of order"
+
