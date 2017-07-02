@@ -48,6 +48,7 @@ for words in blob.words:
 	
 print cleaned
 
+# if the words are in the dictionary
 for words in cleaned:
 	if words in dict["NN"] or words in dict["VBD"]:
 		call = True
@@ -55,10 +56,10 @@ for words in cleaned:
 	else:
 		call = False
 
-
+# if there is a call to be made and we're deciding between the places to call
 if call == True:
 	if words in cleaned and words == "web":
-		print "Call the computer company"
+		
 	elif words in cleaned and words == "advertise":
 		print "Call the advertisment firm"
 	else:
