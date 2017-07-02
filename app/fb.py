@@ -55,7 +55,6 @@ def get_group_data():
 		
 
 
-get_group_data()
 
 
 # def get_links():
