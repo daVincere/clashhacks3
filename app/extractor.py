@@ -5,7 +5,8 @@ from stop_words import get_stop_words
 
 stop_words = get_stop_words('en')
 stop_words = get_stop_words('english')
-
+text = ""
+link = ""
 try:
 	text = "Hi, Any freelancer who can build a very simple app to swipe left and right (just like tinder, but definately not for dating). I need a quote and timeframe to build it. I'll only contact you if you give me quote and timelines first."
 	link = "https://www.facebook.com/groups/delhistartupnetwork/permalink/728027040733150/"
@@ -69,11 +70,13 @@ for words in cleaned:
 # if there is a call to be made and we're deciding between the places to call
 if call == True:
 	if words in cleaned and words == "web":
-		dev_jobs(text, link, realiblity)
+		dev_jobs(text=text, link=link, realiblity=realiblity)
 	elif words in cleaned and words == "advertise":
-		dev_market(text, link, realiblity)
+		dev_market(text=text, link=link, realiblity=realiblity)
 	else:
 		print "Call no one"
 else:
 	print "out of order"
+
+print "job here done!"
 

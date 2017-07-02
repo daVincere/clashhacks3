@@ -1,19 +1,14 @@
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% block head %}
-    <link rel="stylesheet" href="style.css" />
-    <title>{% block title %}{% endblock %}</title>
-    {% endblock %}
-</head>
-<body>
-    <div id="content">{% block content %}{% endblock %}</div>
+{% block content %}
 
-    <div id="footer">
-        {% block footer %}
-        &copy; Copyright 2016 by <a href="#">ClashHacks</a>.
-        {% endblock %}
+      <div class="row marketing">
+        <div class="col-md-4 col-md-offset-4">
+          <h4>Leads</h4>
+          <p>{{contents.text}}</p>
+          <link>{{contents.url}}</link>
+          <p>{{contents.realbility}}</p>
+      </div>
     </div>
-</body>
-</html>
+
+{% endblock %}
