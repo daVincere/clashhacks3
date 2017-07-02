@@ -3,8 +3,6 @@ from stop_words import get_stop_words
 
 # import app.views
 
-import keywords
-
 stop_words = get_stop_words('en')
 stop_words = get_stop_words('english')
 
@@ -12,6 +10,8 @@ text = raw_input("Please enter the text::")
 text = text.lower()
 print text
 blob = tb(text)
+
+job = 0
 
 # dictonary
 dict = {
@@ -26,7 +26,6 @@ dict = {
 		"market",
 		"brand",
 		"website",
-		"app",
 		],
 
 	"VBD":[
@@ -35,7 +34,6 @@ dict = {
 		"needed",
 		"required",
 		"expansion",
-		"requirement",
 		]
 	}
 
@@ -63,9 +61,9 @@ for words in cleaned:
 # if there is a call to be made and we're deciding between the places to call
 if call == True:
 	if words in cleaned and words == "web":
-		dev_jobs()
+		job+=1
 	elif words in cleaned and words == "advertise":
-		dev_market()
+		job+=1
 	else:
 		print "Call no one"
 else:
