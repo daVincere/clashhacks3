@@ -9,13 +9,29 @@ def index():
 	return render_template('home.html')
 
 @app.route('/dev')
-def dev_jobs():
-	job = extractor.job
-	print extractor.job
-	return render_template('dev_jobs.html', content={"job":job, "name": "hasime"})
+def dev_jobs(text ,url, realiblity):
+	if text == "":
+		content = {
+		"text":"Nothing found",
+		"url":" ",
+		"realiblity":" ",
+		}
+	else:
+		content = {
+		"text":text,
+		"url": url,
+		"realiblity": realiblity,
+		}
+	print "it came here"
+	return render_template('dev_jobs.html', content)
 
 @app.route('/market')
-def dev_market():
-	return render_template('m_jobs.html')
+def dev_market(*args, **kwargs):
+	content = {
+	"text": args.text,
+	"url": args.url,
+	"realiblity": args.realiblity,
+	}
+	return render_template('m_jobs.html', content)
 
 
