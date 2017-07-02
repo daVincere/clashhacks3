@@ -5,7 +5,8 @@ from stop_words import get_stop_words
 
 stop_words = get_stop_words('en')
 stop_words = get_stop_words('english')
-
+text = ""
+link = ""
 try:
 	text = "Hi, Any freelancer who can build a very simple app to swipe left and right (just like tinder, but definately not for dating). I need a quote and timeframe to build it. I'll only contact you if you give me quote and timelines first."
 	link = "https://www.facebook.com/groups/delhistartupnetwork/permalink/728027040733150/"
