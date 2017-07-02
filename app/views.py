@@ -1,6 +1,7 @@
 from app import app
 from flask import render_template
 
+import decimal
 import extractor
 
 @app.route("/")
@@ -20,7 +21,7 @@ def dev_jobs():
 		content = {
 		"text": extractor.text,
 		"url": extractor.link,
-		"realiblity": extractor.realiblity,
+		"realiblity": round(decimal.Decimal(extractor.realiblity),2),
 		}
 		print extractor.link
 	return render_template('dev_jobs.html', contents=content)
@@ -30,7 +31,7 @@ def dev_market():
 	content = {
 	"text": extractor.text,
 	"url": extractor.link,
-	"realiblity": extractor.realiblity,
+	"realiblity": round(decimal.Decimal(extractor.realiblity),2),
 	}
 	print extractor.link
 	return render_template('m_jobs.html', contents=content)
