@@ -9,7 +9,7 @@ text = ""
 link = ""
 
 try:
-	text = "Hi, Any freelancer who can build a very simple app to swipe left and right (just like tinder, but definately not for dating). I need a quote and timeframe to build it. I'll only contact you if you give me quote and timelines first."
+	text = "Hi, Any freelancer who can build a very simple website, web app to swipe left and right (just like tinder, but definately not for dating). I need a quote and timeframe to build it. I'll only contact you if you give me quote and timelines first."
 	link = "https://www.facebook.com/groups/delhistartupnetwork/permalink/728027040733150/"
 except:
 	pass
@@ -72,10 +72,12 @@ for words in cleaned:
 if call == True:
 	if words in cleaned and words == "web":
 		dev_jobs(text=text, link=link, realiblity=realiblity)
+		exit()
 	elif words in cleaned and words == "advertise":
 		dev_market(text=text, link=link, realiblity=realiblity)
+		exit()
 	else:
-		print "Call no one"
+		print "Call marketing guys"
 else:
 	print "out of order"
 
